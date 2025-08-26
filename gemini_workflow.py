@@ -135,12 +135,12 @@ def main():
     for i, trend in enumerate(trends[:7], 1):
         keyword = trend.get('keyword', 'Unknown')
         confidence = trend.get('gemini_confidence', 0)
-        potential = trend.get('business_potential', 'Unknown')
+        potential = trend.get('mobile_app_potential', 'Unknown')
         gap = trend.get('content_gap_indicator', 'none')
         
         print(f"   {i}. {keyword}")
         print(f"      💪 Confidence: {confidence:.2f}/1.0")
-        print(f"      🎯 Business Potential: {potential}/10")
+        print(f"      🎯 Mobile App Potential: {potential}/10")
         if gap and gap != 'none':
             print(f"      ⚡ Content Gap: {gap.upper()}")
         print()
